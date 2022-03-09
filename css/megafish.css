@@ -1,0 +1,324 @@
+/*.sf-menu, .sf-menu * {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.sf-menu ul {
+	position: absolute;
+	display: none;
+	top: 100%;
+	left: 0;
+	z-index: 99;
+}
+.sf-menu > li {
+	float: left;
+}
+.sf-menu li:hover > ul,
+.sf-menu li.sfHover > ul {
+	display: block;
+}
+
+.sf-menu a {
+	display: block;
+	position: relative;
+}
+.sf-menu ul ul {
+	top: 0;
+	left: 100%;
+}*/
+
+/*** ESSENTIAL STYLES ***/
+.sf-menu li.pn-relative ul {
+  position: absolute;
+  display: none;
+  top: 100%;
+  margin-top: 0;
+  left: 0;
+  z-index: 99;
+  /*-webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);*/
+}
+.sf-menu > li.pn-relative {
+  position:relative;
+}
+.sf-menu li.pn-relative:hover > ul,
+.sf-menu li.pn-relative.sfHover > ul {
+  display: block;
+}
+.sf-menu li.pn-relative ul ul {
+  top: 0;
+  margin-top: 0;
+  left: 100%;
+}
+
+/*** DEMO SKIN ***/
+.sf-menu {
+  float: left;
+  padding-left: 230px;
+}
+.sf-menu .pn-relative ul {
+  background: #fefefe;
+  padding: 0 0;
+  text-align: left;
+  min-width: 12em; /* allow long menu items to determine submenu width */
+  *width: 12em; /* no auto sub width for IE7, see white-space comment below */
+}
+.sf-menu li.pn-relative {
+  white-space: nowrap; /* no need for Supersubs plugin */
+  *white-space: normal; /* ...unless you support IE7 (let it wrap) */
+}
+.sf-menu .pn-relative ul li a {
+  padding: 16px 10px 14px 20px;
+  text-decoration: none;
+  color: #777;
+  background: none;
+  font-weight: 400;
+  font-size: 13px;
+  display: block;
+  -webkit-transition: all 0.15s linear;
+  -moz-transition: all 0.15s linear;
+  -o-transition: all 0.15s linear;
+  transition: all 0.15s linear;
+}
+.sf-menu .pn-relative ul .has-child > a {
+  -webkit-transition: all 0.15s linear;
+  -moz-transition: all 0.15s linear;
+  -o-transition: all 0.15s linear;
+  transition: all 0.15s linear;
+}
+.sf-menu > li > a:hover {
+  color: #111;
+  background: none;
+}
+.sf-menu .pn-relative ul li a:hover {
+  color: #111;
+}
+.sf-menu .pn-relative ul li {
+  background: #fefefe;
+  position: relative;
+  border-bottom: 1px solid #f5f5f5;
+}
+.sf-menu .pn-relative ul ul li {
+  background: #fefefe;
+  position: relative;
+}
+.sf-menu .pn-relative ul li:last-child {
+	border-bottom: none;
+}
+
+
+
+/*** Mega Menu rgba(170, 170, 170, 0.2)***/
+
+/*** ESSENTIAL STYLES ***/
+.sf-menu {
+  position: relative;
+  padding: 0;
+  list-style: none;
+  margin:20px 0;
+}
+.sf-menu .sf-mega {
+  position: absolute;
+  display: none;
+  top: 100%;
+  margin-top:0;
+  left: 0;
+  z-index: 99;
+  /*-webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);*/
+}
+.sf-menu > li {
+  display: inline-block;
+}
+.sf-menu li.sf-mega-wrap:hover > .sf-mega,
+.sf-menu li.sf-mega-wrap.sfHover > .sf-mega {
+  display: block;
+}
+
+.sf-menu > li > a {
+  display: block;
+  position: relative;
+}
+
+
+/*** DEMO SKIN ***/
+.sf-menu {
+  float: left;
+  width: 100%;
+  text-align: right;
+}
+.sf-menu .sf-mega {
+  width: 100%; /* allow long menu items to determine submenu width */
+}
+/*.sf-menu > li:first-child a {
+	border:none;
+	padding-left:0;
+}*/
+.sf-menu > li:last-child a {
+	border: none;
+	padding-right: 0;
+}
+.sf-menu > li > a {
+  border: none;
+  padding: 13px 15px;
+  text-decoration: none;
+  zoom: 1; /* IE7 */
+  color: #777;
+  background: none;
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: uppercase;
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+.sf-menu > li.current > a {
+  color: #111;
+  background: none;
+}
+.sf-menu > li {
+  -webkit-transition: background .2s;
+  transition: background .2s;
+}
+.sf-menu > li.sfHover > a, .sf-menu ul .has-child.sfHover > a:after {
+  color: #111;
+  background: none;
+  /* only transition out, not in */
+  -webkit-transition: none;
+  transition: none;
+}
+ul.menu .has-child > a:hover:after {
+  color: #fff;
+  background: none;
+  /* only transition out, not in */
+  -webkit-transition: none;
+  transition: none;
+}
+.sf-menu li ul li.sfHover > a, .sf-menu > li > ul > li.sfHover > a, .sf-menu > li > ul > li > ul > li.sfHover > a, .sf-menu > li > ul > li > ul > li > ul > li.sfHover > a {
+  color: #111;
+  background: none;
+  /* only transition out, not in */
+  -webkit-transition: none;
+  transition: none;
+}
+
+
+/*** mega menu dropdown ***/
+.sf-mega {
+  padding: 38px 15px 32px 15px;
+  box-sizing: border-box;
+  width: 100%;
+  background: #fefefe;
+  text-align: left;
+}
+.sf-mega-section {
+  float: left;
+  width: auto; /* optional */
+}
+.sf-mega .sf-mega-section ul {
+  padding: 0 0 0 2px;
+  margin: 0;
+}
+.sf-mega .sf-mega-section ul li {
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+.sf-mega .sf-mega-section ul li:first-child a {
+	padding-top: 0;
+}
+.sf-mega .sf-mega-section ul li:last-child a {
+	padding-bottom: 0;
+}
+.sf-mega .sf-mega-section ul li a {
+  padding: 6px 0 6px 0;
+  text-decoration: none;
+  color: #777;
+  background: none;
+  font-size: 13px;
+  font-weight: 400;
+  display: inline-block;
+  -webkit-transition: all 0.15s linear;
+  -moz-transition: all 0.15s linear;
+  -o-transition: all 0.15s linear;
+  transition: all 0.15s linear;
+}
+.sf-mega .sf-mega-section ul li a:hover {
+  color: #111;
+}
+
+/*.banner_hover {
+	cursor:pointer;
+	display: block;	
+	opacity: 1; 
+	position: absolute; 
+	top:0;
+	left:0;
+	width: 100%; 
+	height: 100%;
+	background:none;
+	-webkit-transition:all 0.2s linear;
+    -moz-transition:all 0.2s linear;
+    -o-transition:all 0.2s linear;
+    transition:all 0.2s linear;	
+}*/
+.nav-banner {
+  width: 100%;
+  float: left;
+  position: relative;
+}
+.nav-banner img {
+  width: 100%;
+}
+.banner_hover {
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  display:block;
+  cursor:pointer;
+  position:absolute;
+  -webkit-box-shadow:0 0 0 10px rgba(255, 255, 255, 0) inset;
+  -moz-box-shadow:0 0 0 10px rgba(255, 255, 255, 0) inset;
+  box-shadow:0 0 0 10px rgba(255, 255, 255, 0) inset;
+  -webkit-transition:all 0.2s linear;
+  -moz-transition:all 0.2s linear;
+  -o-transition:all 0.2s linear;
+  transition:all 0.2s linear;	
+  z-index:3;
+}
+.nav-banner:hover .banner_hover {
+  -webkit-box-shadow:0 0 0 10px rgba(255, 255, 255, 0.3) inset;
+  -moz-box-shadow:0 0 0 10px rgba(255, 255, 255, 0.3) inset;
+  box-shadow:0 0 0 10px rgba(255, 255, 255, 0.3) inset;
+}
+
+
+
+/*** arrows (for all except IE7) **/
+/*.sf-arrows .sf-with-ul {
+  padding-right: 2.5em;
+  *padding-right: 1em;  no CSS arrows for IE7 (lack pseudo-elements) 
+}*/
+/* styling for both css and generated arrows */
+/*.sf-arrows .sf-with-ul:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 1em;
+  margin-top: -3px;
+  height: 0;
+  width: 0;
+   order of following 3 rules important for fallbacks to work 
+  border: 5px solid transparent;
+  border-top-color: #dFeEFF;  edit this to suit design (no rgba in IE8) 
+  border-top-color: rgba(255,255,255,.5);
+}*/
+/*.sf-arrows > li > .sf-with-ul:focus:after,
+.sf-arrows > li:hover > .sf-with-ul:after,
+.sf-arrows > .sfHover > .sf-with-ul:after {
+  border-top-color: white;  IE8 fallback colour 
+}*/

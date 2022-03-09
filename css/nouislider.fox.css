@@ -1,0 +1,99 @@
+.range-slider,
+.range-slider * {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	display: block;
+	cursor: default;
+}
+.range-slider {
+	position: relative;
+}
+.range-slider a {
+	position: absolute;
+	z-index: 1;
+}
+.range-slider a:nth-child(2) {
+	background: inherit !important;
+}
+.range-slider.horizontal a {
+	height: 100%;
+	right: 0;
+}
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+	.range-slider:before,
+	body.TOUCH,
+	.range-slider div {
+		-ms-touch-action: none;
+	}
+	.range-slider:before {
+		display: block;
+		position: absolute;
+		width: 150%;
+		left: -25%;
+		height: 400%;
+		top: -150%;
+		content: "";
+		z-index: -1;
+	}
+}
+.range-slider {
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	-ms-border-radius: 10px; 
+	-o-border-radius: 10px;
+	border-radius: 10px;
+}
+.range-slider.connect a,
+.range-slider.connect.lower {
+	background: #ddd;
+}
+.range-slider,
+.range-slider.connect.lower a {
+	border: none;
+	background: #ddd;
+	/*background: -moz-linear-gradient(top,  #fdfdfd 0%, #f1f1f1 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fdfdfd), color-stop(100%,#f1f1f1));
+	background: -webkit-linear-gradient(top,  #fdfdfd 0%,#f1f1f1 100%);
+	background: -o-linear-gradient(top,  #fdfdfd 0%,#f1f1f1 100%);
+	background: -ms-linear-gradient(top,  #fdfdfd 0%,#f1f1f1 100%);
+	background: linear-gradient(to bottom,  #fdfdfd 0%,#f1f1f1 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fdfdfd', endColorstr='#f1f1f1',GradientType=0 );*/
+}
+.range-slider > a:first-child {
+	background: #f59600;
+}
+.range-slider.disabled,
+.range-slider.disabled.connect.lower a {
+	background: #f59600;
+	box-shadow: none;
+}
+.range-slider div {
+	height: 16px;
+	width: 16px;
+	border:none;
+	/*box-shadow: 0 0 1px rgba(0,0,0,0.4) inset;
+	-webkit-box-shadow:  0 0 1px rgba(0,0,0,0.4) inset;*/
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	-ms-border-radius: 50%; 
+	-o-border-radius: 50%;
+	border-radius: 50%;
+	background: #fff;
+	cursor: pointer;
+	border:1px solid #f59600;
+}
+.range-slider.disabled div {
+	background: transparent;
+}
+.range-slider.horizontal {
+	width: 100%;
+	height: 5px;
+	margin: 0 auto;
+}
+.range-slider.horizontal div {
+	margin: -6px 0 0 -9px;
+}
